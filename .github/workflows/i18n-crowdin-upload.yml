@@ -1,16 +1,17 @@
 name: Crowdin Upload Action
 
-on:
-  workflow_dispatch:
-  push:
-    paths:
-      - 'public/locales/en-US/grafana.json'
-      - 'public/app/plugins/datasource/azuremonitor/locales/en-US/grafana-azure-monitor-datasource.json'
-      - 'packages/grafana-sql/src/locales/en-US/grafana-sql.json'
-      - 'apps/advisor/pkg/translations/en-US/grafana-advisor.json'
-    branches:
-      - main
-
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   workflow_dispatch:
+#   push:
+#     paths:
+#       - 'public/locales/en-US/grafana.json'
+#       - 'public/app/plugins/datasource/azuremonitor/locales/en-US/grafana-azure-monitor-datasource.json'
+#       - 'packages/grafana-sql/src/locales/en-US/grafana-sql.json'
+#       - 'apps/advisor/pkg/translations/en-US/grafana-advisor.json'
+#     branches:
+#       - main
+# 
 jobs:
   upload-sources-to-crowdin:
     if: github.repository == 'grafana/grafana'

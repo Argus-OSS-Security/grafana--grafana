@@ -1,12 +1,13 @@
 name: Modowners reviewers
 
-on:
-  pull_request:
-    paths:
-      - go.mod
-      - scripts/modowners/**
-      - .github/workflows/modowners-reviewers.yml
-
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   pull_request:
+#     paths:
+#       - go.mod
+#       - scripts/modowners/**
+#       - .github/workflows/modowners-reviewers.yml
+# 
 permissions: {}
 
 concurrency:

@@ -1,11 +1,12 @@
 name: Run commands when issues are labeled or comments added
 
-on:
-  issues:
-    types: [labeled, unlabeled]
-  issue_comment:
-    types: [created]
-
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   issues:
+#     types: [labeled, unlabeled]
+#   issue_comment:
+#     types: [created]
+# 
 concurrency:
   group: issue-commands-${{ github.event.issue.number }}
 

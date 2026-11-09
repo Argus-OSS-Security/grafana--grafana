@@ -1,12 +1,13 @@
 name: Auto-milestone
-on:
-  pull_request_target:  # zizmor: ignore[dangerous-triggers] action uses GITHUB_TOKEN only, does not check out fork code
-    types:
-      - opened
-      - reopened
-      - closed
-      - ready_for_review
-
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   pull_request_target:  # zizmor: ignore[dangerous-triggers] action uses GITHUB_TOKEN only, does not check out fork code
+#     types:
+#       - opened
+#       - reopened
+#       - closed
+#       - ready_for_review
+# 
 permissions: {}
 
 # Note: this action runs with write permissions on GITHUB_TOKEN even from forks

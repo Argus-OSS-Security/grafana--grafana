@@ -1,13 +1,14 @@
 name: Dashboard Re-embedding Approval
 
-on:
-  pull_request:
-    types: [opened, synchronize, reopened, labeled, unlabeled, ready_for_review]
-    branches: [main]
-    paths:
-      - pkg/storage/unified/search/embed/dashboard/extractor.go
-      - .github/workflows/pr-reembed-version-approval.yml
-
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   pull_request:
+#     types: [opened, synchronize, reopened, labeled, unlabeled, ready_for_review]
+#     branches: [main]
+#     paths:
+#       - pkg/storage/unified/search/embed/dashboard/extractor.go
+#       - .github/workflows/pr-reembed-version-approval.yml
+# 
 permissions:
   contents: read
 

@@ -1,22 +1,23 @@
 name: Deploy Storybook
 
-on:
-  push:
-    branches:
-      - main
-  workflow_call:
-    inputs:
-      version:
-        required: true
-        description: The version being released (with a v prefix)
-        type: string
-  workflow_dispatch:
-    inputs:
-      version:
-        required: true
-        description: The version being released (with a v prefix)
-        type: string
-
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   push:
+#     branches:
+#       - main
+#   workflow_call:
+#     inputs:
+#       version:
+#         required: true
+#         description: The version being released (with a v prefix)
+#         type: string
+#   workflow_dispatch:
+#     inputs:
+#       version:
+#         required: true
+#         description: The version being released (with a v prefix)
+#         type: string
+# 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true

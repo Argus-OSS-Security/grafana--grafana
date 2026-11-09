@@ -5,15 +5,16 @@
 #   - opens a PR bumping main to the next minor pre-release (X.(Y+1).0-pre)
 #   - creates release-X.Y.0 on grafana/grafana-enterprise (no version files to bump there)
 name: Create release branch
-on:
-  workflow_dispatch:
-    inputs:
-      dry_run:
-        description: "Compute the bumps and log them, but don't push branches or open the PR"
-        required: false
-        default: false
-        type: boolean
-
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   workflow_dispatch:
+#     inputs:
+#       dry_run:
+#         description: "Compute the bumps and log them, but don't push branches or open the PR"
+#         required: false
+#         default: false
+#         type: boolean
+# 
 permissions: {}
 
 jobs:

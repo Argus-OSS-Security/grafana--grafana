@@ -3,12 +3,13 @@
 # via workflow_run
 
 name: Backport (trigger)
-on:
-  pull_request:
-    types:
-      - closed
-      - labeled
-
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   pull_request:
+#     types:
+#       - closed
+#       - labeled
+# 
 permissions: {}
 
 jobs:

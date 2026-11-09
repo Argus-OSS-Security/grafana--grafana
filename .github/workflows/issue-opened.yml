@@ -3,17 +3,18 @@ name: Run commands when issues are opened
 # important: this workflow uses a github app that is strictly limited
 # to issues. If you want to change the triggers for this workflow,
 # please review if the permissions are still sufficient.
-on:
-  issues:
-    types: [opened]
-  workflow_dispatch:
-    inputs:
-      limit:
-        description: "Max number of unlabeled open issues to triage (keep small to avoid rate limits)"
-        required: false
-        default: "10"
-        type: string
-
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   issues:
+#     types: [opened]
+#   workflow_dispatch:
+#     inputs:
+#       limit:
+#         description: "Max number of unlabeled open issues to triage (keep small to avoid rate limits)"
+#         required: false
+#         default: "10"
+#         type: string
+# 
 concurrency:
   group: issue-opened-${{ github.event.issue.number || github.run_id }}
 

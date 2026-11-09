@@ -1,15 +1,16 @@
 name: golangci-lint
-on:
-  push:
-    paths:
-      - pkg/**
-      - .github/workflows/go-lint.yml
-      - .golangci.yml
-      - go.*
-    branches:
-      - main
-  pull_request:
-
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   push:
+#     paths:
+#       - pkg/**
+#       - .github/workflows/go-lint.yml
+#       - .golangci.yml
+#       - go.*
+#     branches:
+#       - main
+#   pull_request:
+# 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: ${{ startsWith(github.ref, 'refs/pull/') }}

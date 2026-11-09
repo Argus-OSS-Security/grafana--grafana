@@ -1,12 +1,13 @@
 name: Externalized Data Sources Reminder
 
-on:
-  pull_request:
-    types: [opened]
-    paths:
-      - "public/app/plugins/datasource/graphite/**"
-      - "pkg/tsdb/graphite/**"
-
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   pull_request:
+#     types: [opened]
+#     paths:
+#       - "public/app/plugins/datasource/graphite/**"
+#       - "pkg/tsdb/graphite/**"
+# 
 jobs:
   add-comment:
     if: ${{ ! github.event.pull_request.head.repo.fork }}

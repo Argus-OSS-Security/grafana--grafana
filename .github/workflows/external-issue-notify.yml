@@ -5,10 +5,11 @@ name: External Issue Notify
 # ./community-triage/, and runs the scripts from there. Config
 # (team-notifications-config.json) is resolved at this repo's root.
 
-on:
-  issues:
-    types: [opened, labeled]
-
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   issues:
+#     types: [opened, labeled]
+# 
 permissions: {}
 
 concurrency:

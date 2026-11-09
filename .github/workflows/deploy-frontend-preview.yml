@@ -9,12 +9,13 @@ name: Deploy frontend preview
 # will deploy a frontend preview for frontend-only PRs, and an ephemeral
 # instance for everything else.
 
-on:
-  issue_comment:
-    types: [created]
-  pull_request:
-    types: [synchronize]
-
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   issue_comment:
+#     types: [created]
+#   pull_request:
+#     types: [synchronize]
+# 
 permissions: {}
 
 jobs:

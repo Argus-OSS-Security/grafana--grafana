@@ -1,16 +1,17 @@
 name: PR build Docker image
 
-on:
-  pull_request:
-    # Include ready_for_review so the draft gate below re-evaluates when a draft
-    # is marked ready without a new push (default types omit that event).
-    types:
-      - opened
-      - synchronize
-      - reopened
-      - ready_for_review
-  workflow_dispatch: {}
-
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   pull_request:
+#     # Include ready_for_review so the draft gate below re-evaluates when a draft
+#     # is marked ready without a new push (default types omit that event).
+#     types:
+#       - opened
+#       - synchronize
+#       - reopened
+#       - ready_for_review
+#   workflow_dispatch: {}
+# 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: ${{ startsWith(github.ref, 'refs/pull/') }}

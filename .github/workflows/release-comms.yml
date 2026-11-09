@@ -2,25 +2,26 @@
 # posting to slack, the website, community forums, etc.
 # Only things that happen after a release is completed and all of the necessary code changes (like the changelog) are made.
 name: Post-release
-on:
-  workflow_dispatch:
-    inputs:
-      dry_run:
-        required: false
-        default: true
-        type: boolean
-      version:
-        required: true
-      latest:
-        type: boolean
-        default: false
-  pull_request:
-    types:
-    - closed
-    branches:
-    - 'main'
-    - 'release-*.*.*'
-
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   workflow_dispatch:
+#     inputs:
+#       dry_run:
+#         required: false
+#         default: true
+#         type: boolean
+#       version:
+#         required: true
+#       latest:
+#         type: boolean
+#         default: false
+#   pull_request:
+#     types:
+#     - closed
+#     branches:
+#     - 'main'
+#     - 'release-*.*.*'
+# 
 permissions:
   contents: read
 

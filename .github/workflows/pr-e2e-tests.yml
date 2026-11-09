@@ -1,12 +1,13 @@
 name: End-to-end tests
 
-on:
-  pull_request:
-  push:
-    branches:
-      - main
-      - release-*.*.*
-
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   pull_request:
+#   push:
+#     branches:
+#       - main
+#       - release-*.*.*
+# 
 concurrency:
   group: ${{ github.workflow }}-${{ startsWith(github.ref, 'refs/pull/') && github.ref || github.sha }}
   cancel-in-progress: ${{ startsWith(github.ref, 'refs/pull/') }}

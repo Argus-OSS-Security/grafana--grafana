@@ -1,11 +1,12 @@
 name: Crowdin automatic task management
 
-on:
-  workflow_dispatch:
-  # once a month on the first day of the month at midnight
-  schedule:
-    - cron: "0 0 1 * *"
-
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   workflow_dispatch:
+#   # once a month on the first day of the month at midnight
+#   schedule:
+#     - cron: "0 0 1 * *"
+# 
 jobs:
   create-tasks-in-crowdin:
     runs-on: ubuntu-x64

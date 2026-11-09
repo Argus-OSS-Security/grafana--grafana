@@ -1,12 +1,13 @@
 name: Swagger generated code
 
-on:
-  push:
-    branches:
-      - main
-      - release-*
-  pull_request:
-
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   push:
+#     branches:
+#       - main
+#       - release-*
+#   pull_request:
+# 
 permissions: {}
 
 concurrency:

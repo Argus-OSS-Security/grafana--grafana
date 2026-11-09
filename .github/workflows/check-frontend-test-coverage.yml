@@ -1,17 +1,18 @@
 name: Check Frontend Test Coverage
 
-on:
-  pull_request:
-    branches: [main]
-    types: [opened, synchronize, reopened, labeled, unlabeled]
-    paths:
-      - '**/*.js'
-      - '**/*.jsx'
-      - '**/*.ts'
-      - '**/*.tsx'
-      - 'package.json'
-      - '.github/CODEOWNERS'
-
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   pull_request:
+#     branches: [main]
+#     types: [opened, synchronize, reopened, labeled, unlabeled]
+#     paths:
+#       - '**/*.js'
+#       - '**/*.jsx'
+#       - '**/*.ts'
+#       - '**/*.tsx'
+#       - 'package.json'
+#       - '.github/CODEOWNERS'
+# 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true

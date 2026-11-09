@@ -1,11 +1,12 @@
 name: PR automation
-on:
-  pull_request_target:  # zizmor: ignore[dangerous-triggers] action uses GITHUB_TOKEN only, does not check out fork code
-    types:
-      - labeled
-      - opened
-      - synchronize
-
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   pull_request_target:  # zizmor: ignore[dangerous-triggers] action uses GITHUB_TOKEN only, does not check out fork code
+#     types:
+#       - labeled
+#       - opened
+#       - synchronize
+# 
 concurrency:
   group: pr-commands-${{ github.event.number }}
 

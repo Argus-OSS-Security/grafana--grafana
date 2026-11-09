@@ -1,11 +1,12 @@
 name: External PR labelling
 
-on:
-  # We need "write" permissions on the PR to be able to add a label.
-  pull_request:
-    types:
-      - opened
-
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   # We need "write" permissions on the PR to be able to add a label.
+#   pull_request:
+#     types:
+#       - opened
+# 
 permissions: {}
 
 jobs:

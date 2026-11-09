@@ -1,9 +1,10 @@
 name: Label community champion issues
 
-on:
-  issues:
-    types: [opened]
-
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   issues:
+#     types: [opened]
+# 
 permissions: {}
 
 jobs:

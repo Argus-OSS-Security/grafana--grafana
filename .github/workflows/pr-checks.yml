@@ -1,8 +1,9 @@
 name: PR Checks
-on:
-  pull_request:
-    types: [opened, synchronize, reopened, labeled, unlabeled]
-
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   pull_request:
+#     types: [opened, synchronize, reopened, labeled, unlabeled]
+# 
 concurrency:
   group: pr-checks-${{ github.event.number }}-new
   cancel-in-progress: true

@@ -5,10 +5,11 @@ name: External FR Notify
 # ./community-triage/, and runs the scripts from there. Config
 # (team-notifications-config.json) is resolved at this repo's root.
 
-on:
-  issues:
-    types: [labeled, typed]
-
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   issues:
+#     types: [labeled, typed]
+# 
 permissions: {}
 
 concurrency:

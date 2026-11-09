@@ -1,14 +1,15 @@
 name: Dispatch check for patch conflicts
-on:
-  pull_request:
-    types:
-      - opened
-      - reopened
-      - synchronize
-    branches:
-      - "main"
-      - "release-*"
-
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   pull_request:
+#     types:
+#       - opened
+#       - reopened
+#       - synchronize
+#     branches:
+#       - "main"
+#       - "release-*"
+# 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   # If a new commit is applied, just give up.

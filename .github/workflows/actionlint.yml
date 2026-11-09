@@ -1,25 +1,26 @@
 # This workflow depends on the ./actionlint-format.txt file. It is MIT licensed (thanks, rhysd!): https://github.com/rhysd/actionlint/blob/2ab3a12c7848f6c15faca9a92612ef4261d0e370/testdata/format/sarif_template.txt
 name: Actionlint
 
-on:
-  push:
-    branches:
-      - main
-      - release-*
-    paths:
-      - .github/workflows/**
-      - .github/actions/**
-      - .github/actionlint.yaml
-  pull_request:
-    types:
-      - opened
-      - synchronize
-      - reopened
-    paths:
-      - .github/workflows/**
-      - .github/actions/**
-      - .github/actionlint.yaml
-
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   push:
+#     branches:
+#       - main
+#       - release-*
+#     paths:
+#       - .github/workflows/**
+#       - .github/actions/**
+#       - .github/actionlint.yaml
+#   pull_request:
+#     types:
+#       - opened
+#       - synchronize
+#       - reopened
+#     paths:
+#       - .github/workflows/**
+#       - .github/actions/**
+#       - .github/actionlint.yaml
+# 
 permissions: {}
 
 concurrency:

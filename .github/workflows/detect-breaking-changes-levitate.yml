@@ -8,15 +8,16 @@ concurrency:
 
 permissions: {}
 
-on:
-  pull_request:
-    paths:
-      - 'packages/**'
-      - '.nvmrc'
-      - '.github/workflows/detect-breaking-changes-levitate.yml'
-    branches:
-      - 'main'
-
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   pull_request:
+#     paths:
+#       - 'packages/**'
+#       - '.nvmrc'
+#       - '.github/workflows/detect-breaking-changes-levitate.yml'
+#     branches:
+#       - 'main'
+# 
 jobs:
   buildPR:
     name: Build PR packages artifacts

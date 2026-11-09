@@ -1,9 +1,10 @@
 name: Label Enhancement issues
 
-on:
-  issues:
-    types: [typed, opened]
-
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   issues:
+#     types: [typed, opened]
+# 
 permissions: {}
 
 jobs:

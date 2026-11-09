@@ -1,13 +1,14 @@
 name: Update Schema Types
 
-on:
-  push:
-    branches:
-      - main
-    paths:
-      - docs/sources/developers/plugins/plugin.schema.json
-  workflow_dispatch:
-
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   push:
+#     branches:
+#       - main
+#     paths:
+#       - docs/sources/developers/plugins/plugin.schema.json
+#   workflow_dispatch:
+# 
 permissions: {}
 
 jobs:

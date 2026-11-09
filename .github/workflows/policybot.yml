@@ -1,22 +1,23 @@
 name: Policybot
-on:
-  push:
-    paths:
-      - .policy.yml
-      - .policy.yml.tmpl
-      - justfile
-      - .github/workflows/*
-    branches:
-      - main
-  pull_request:
-    paths:
-      - .policy.yml
-      - .policy.yml.tmpl
-      - justfile
-      - .github/workflows/*
-    branches:
-      - main
-
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   push:
+#     paths:
+#       - .policy.yml
+#       - .policy.yml.tmpl
+#       - justfile
+#       - .github/workflows/*
+#     branches:
+#       - main
+#   pull_request:
+#     paths:
+#       - .policy.yml
+#       - .policy.yml.tmpl
+#       - justfile
+#       - .github/workflows/*
+#     branches:
+#       - main
+# 
 permissions: {}
 
 concurrency:

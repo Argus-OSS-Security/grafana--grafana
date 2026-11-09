@@ -1,12 +1,13 @@
 name: Direct Go Resource Search Result Format
 
-on:
-  pull_request:
-    paths:
-      - '**/*.go'
-      - 'pkg/storage/unified/semgrep/**'
-      - '.github/workflows/pr-resource-search-result-format.yml'
-
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   pull_request:
+#     paths:
+#       - '**/*.go'
+#       - 'pkg/storage/unified/semgrep/**'
+#       - '.github/workflows/pr-resource-search-result-format.yml'
+# 
 permissions:
   contents: read
 

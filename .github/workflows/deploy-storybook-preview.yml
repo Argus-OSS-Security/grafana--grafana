@@ -1,11 +1,12 @@
 name: Deploy Storybook preview
 
-on:
-  pull_request:
-    paths:
-      - 'packages/grafana-ui/**'
-      - 'packages/grafana-data/src/themes/**'
-
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   pull_request:
+#     paths:
+#       - 'packages/grafana-ui/**'
+#       - 'packages/grafana-data/src/themes/**'
+# 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true

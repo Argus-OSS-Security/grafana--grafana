@@ -1,14 +1,15 @@
 name: Deploy pr preview
 
-on:
-  pull_request:
-    types:
-      - opened
-      - synchronize
-      - closed
-    paths:
-      - "docs/sources/**"
-
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   pull_request:
+#     types:
+#       - opened
+#       - synchronize
+#       - closed
+#     paths:
+#       - "docs/sources/**"
+# 
 permissions: {}
 
 jobs:

@@ -2,17 +2,18 @@
 # or whose generated Go code doesn't match its .proto files.
 name: Protobuf checks
 
-on:
-  pull_request:
-    # Recheck when the exception label is added or removed.
-    types: [opened, synchronize, reopened, labeled, unlabeled]
-    paths:
-      - 'pkg/registry/apps/annotation/proto/**'
-      - 'pkg/storage/unified/proto/**'
-      - 'pkg/storage/unified/resourcepb/**'
-      - 'pkg/storage/dbproxy/**'
-      - '.github/workflows/proto-breaking-changes.yml'
-
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   pull_request:
+#     # Recheck when the exception label is added or removed.
+#     types: [opened, synchronize, reopened, labeled, unlabeled]
+#     paths:
+#       - 'pkg/registry/apps/annotation/proto/**'
+#       - 'pkg/storage/unified/proto/**'
+#       - 'pkg/storage/unified/resourcepb/**'
+#       - 'pkg/storage/dbproxy/**'
+#       - '.github/workflows/proto-breaking-changes.yml'
+# 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true

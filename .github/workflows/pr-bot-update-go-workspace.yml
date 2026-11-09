@@ -1,16 +1,17 @@
 name: "Update Go Workspace for Bot PRs"
-on:
-  pull_request:
-    branches: [main]
-    paths:
-      - .github/workflows/pr-bot-update-go-workspace.yml
-      - go.mod
-      - go.sum
-      - go.work
-      - go.work.sum
-      - '**/go.mod'
-      - '**/go.sum'
-      - '**.go'
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   pull_request:
+#     branches: [main]
+#     paths:
+#       - .github/workflows/pr-bot-update-go-workspace.yml
+#       - go.mod
+#       - go.sum
+#       - go.work
+#       - go.work.sum
+#       - '**/go.mod'
+#       - '**/go.sum'
+#       - '**.go'
 permissions: {}
 jobs:
   update:
